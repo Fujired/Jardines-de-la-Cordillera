@@ -6,6 +6,8 @@
   --primary-light: #2e6931;   /* Verde hojas */
   --accent: #8bb174;          /* Verde musgo claro */
   --accent-gold: #d4a373;     /* Tono tierra/cordillera */
+  --whatsapp-green: #25d366;  /* Color oficial WhatsApp */
+  --whatsapp-hover: #1ebd59;
   --dark-bg: #111a12;        /* Fondo oscuro orgánico */
   --light-bg: #f4f7f4;       /* Fondo suave gris-verde */
   --white: #ffffff;
@@ -177,14 +179,14 @@ h1, h2, h3 {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 28px;
+  gap: 24px;
 }
 
 .nav-links a {
@@ -197,6 +199,34 @@ h1, h2, h3 {
 
 .nav-links a:hover {
   color: var(--primary-light);
+}
+
+.nav-buttons-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-whatsapp {
+  background-color: var(--whatsapp-green);
+  color: var(--white) !important;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--whatsapp-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
 }
 
 .btn-nav {
@@ -629,16 +659,25 @@ h1, h2, h3 {
   }
 
   .nav-links {
-    display: none; /* Oculta enlaces de menú en pantalla pequeña pero preserva botón de acción */
+    display: none; /* Oculta enlaces de menú en pantalla pequeña pero preserva botones de acción */
   }
 
   .brand-logo {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
   }
 
+  .logo-icon {
+    font-size: 1.2rem;
+  }
+
+  .nav-buttons-group {
+    gap: 6px;
+  }
+
+  .btn-whatsapp,
   .btn-nav {
-    padding: 6px 14px;
-    font-size: 0.82rem;
+    padding: 6px 12px;
+    font-size: 0.78rem;
   }
 
   .hero {
